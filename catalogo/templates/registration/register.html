@@ -1,0 +1,56 @@
+{% extends 'base_generic.html' %}
+
+
+{% block content %}
+
+{% load static %}
+<br>
+    <h2 class="titulotp" align="center">REGISTRO DE USUARIO</h2>
+        <div class="container">
+            <form method="POST" action="{% url 'register' %}">
+                {% csrf_token %}
+                <div class="container p-3 my-5 border" style="background-color: ghostwhite; margin-top: 20%; height: 120%;">
+                    <div class="col-md-6 mb-3">
+                            <label>Usuario: </label>
+                          <input type="text" class="form-control" placeholder="Ingrese un nombre para su usuario"   <input type="text" name="username" maxlength="150" autofocus required id="id_username">
+                    </div>
+                    <div style="font-size: smaller;text-align: left;">
+                     <li>Requerido. 150 carácteres como máximo. Únicamente letras, dígitos y @/./+/-/_</li>
+                    </div>
+                    <br>
+                    <div class="col-md-6 mb-3">
+                            <label>Correo Electronico: </label>
+                          <input type="text" class="form-control" placeholder="Ingrese su correo"   <input type="email" name="email" maxlength="254" id="id_email">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                            <label>Nombre: </label>
+                          <input type="text" class="form-control" placeholder="Ingrese su nombre"   <input type="text" name="first_name" maxlength="150" id="id_first_name">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                          <label>Apellido: </label>
+                          <input type="text" class="form-control" placeholder="Ingrese su apellido"   <input type="text" name="last_name" maxlength="150" id="id_last_name">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                          <label>Contraseña: </label>
+                          <input type="password" class="form-control" placeholder="Ingrese su contraseña"   <input type="password" name="password1" autocomplete="new-password" required id="id_password1">
+                    </div>
+                    <div style="font-size: smaller;text-align: left;">
+                       <li>Su contraseña no puede asemejarse tanto a su otra información personal.</li>
+                       <li> Su contraseña debe contener al menos 8 caracteres.</li>
+                       <li> Su contraseña no puede ser una clave utilizada comúnmente.</li>
+                       <li> Su contraseña no puede ser completamente numérica.</li>
+                    </div>
+                    <br>
+                    <div class="col-md-6 mb-3">
+                            <label>Vuelva a escribir su contraseña: </label>
+                          <input type="password" class="form-control" placeholder="Repita su contraseña"   <input type="password" name="password2" autocomplete="new-password" required id="id_password2">
+                    </div>
+                    <br>
+                    
+                    <button class="btn btn-primary btn-xl" type="submit" value="register">Registrarse</button>
+                </div>
+            </form>
+        </div>
+<br>
+<br>
+{% endblock %}
