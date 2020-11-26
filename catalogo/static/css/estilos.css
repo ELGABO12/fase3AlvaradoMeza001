@@ -1,0 +1,75 @@
+.titulo{
+    background-color: orange;
+    border: solid #f33f08; 
+    color: #f33f08;
+    padding: 5PX;
+    border-width: 8px;
+    border-radius: 60px;
+}
+
+.tituloxp{
+    background-color: orange;
+    border: solid #f33f08; 
+    color: #f33f08;
+    font-size: medium;
+    padding: 2PX;
+    border-width: 8px;
+    border-radius: 60px;
+    position: static;
+}
+
+.titulo2{
+ background-color: cyan;
+ border: solid #0b2ce9; 
+ color: blue;
+ padding: 5PX;
+ border-width: 8px;
+ border-radius: 60px;
+}
+
+.titulo3{
+    background-color: yellow;
+    border: solid #e90b0b; 
+    color: red;
+    padding: 5PX;
+    border-width: 8px;
+    border-radius: 60px;
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    background-color: darkslategray;
+    color: white;
+}
+
+.cardcj {
+    position: relative;
+    right: -399px;
+}
+
+.titulotp{
+    background-color: rgba(238, 236, 234, 0.712);
+    border: solid #31303079; 
+    color:black;
+    padding: 5PX;
+    border-width: 8px;
+    border-radius: 60px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

@@ -1,0 +1,55 @@
+{% extends 'base_generic.html' %}
+
+
+{% block content %}
+
+{% load static %}
+<body>
+  <h2 class="titulotp" align="center"> INICIAR SESIÓN</h2>
+<div class="container" style="position: relative;">
+    <div class="login-page">
+      <div class="form">
+    <form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+    
+    <div class="container p-3 my-5 border" style="background-color: ghostwhite; margin-top: 20%; height: 120%; ">
+    <div>
+        {% if form.errors %}
+        <p style="color: red; font-size: medium;" align="center">Usuario y/o contraseña incorrecto. Ingrese los datos correctamente e intentelo de nuevo.</p>
+        {% endif %}
+    </div>
+    <br>
+    <div class="col-md-6 mb-3">
+      <td > <label class="label"> Usuario: </label> </td>
+      <p></p>
+      <input type="text" class="form-control"   <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username">
+    </div>
+    <br>
+    <div class="col-md-6 mb-3">
+      <td > <label class="label"> Contraseña: </label> </td>
+      <p></p>
+      <input type="password" class="form-control"  <input type="password" name="password" autocomplete="current-password" required id="id_password">
+    </div>
+    <br>
+    <div>
+      <li><a href="{% url 'register' %}">Registrarse</a></li>
+    </div>
+    <br>
+    <div>
+      <button class="btn btn-primary btn-xl" type="submit" value="login" > Ingresar </button>
+      <input type="hidden" name="next" value="{{ next }}" />
+    </div>
+    </form>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+</body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+{% endblock %}

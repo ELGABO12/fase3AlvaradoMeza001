@@ -1,0 +1,46 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<body>
+    {% if user.is_authenticated  %}{% if user.is_staff %}
+    <div class="page-section portfolio container page-section-heading text-uppercase text-secondary mb-0 text-center ">
+        <h2 class="titulotp" align="center">Borrar Género</h2>
+    
+        <center>
+            
+            <h3>¿Estás seguro de borrar este género?</h3>
+            <br>
+            <br>
+            <h4>Nombre: </h4> <p class="texto text-center"> {{ genre.name }}</p>
+            <br>
+            <h4>Descripción: </h4> <p class="texto text-center"> {{ genre.summary }}</p>
+
+            <br>
+            <br>
+
+            <form action="" method="POST">
+                {% csrf_token %}
+             <div style="width: 50%;">
+                <a href="{% url 'genre-detail' genre.pk %}"class="btn btn-primary btn-xl" style="float: left;">Atras</a>
+                <button type="submit" class="save btn btn-primary btn-xl" style="float: right;">Borrar</button>
+             </div>
+             
+            </form>
+            
+            </center>
+        </div>
+        {% else %}<div class="container">
+            <p class="page-section-heading text-center text-uppercase text-secondary mb-0">Usted no tiene los permisos necesarios para realizar esta acción!!</p>
+                </div>
+        {% endif %}{% else %}<div class="container">
+            <p class="page-section-heading text-center text-uppercase text-secondary mb-0">Usted no tiene los permisos necesarios para realizar esta acción!!</p>
+                </div>{% endif %}
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}

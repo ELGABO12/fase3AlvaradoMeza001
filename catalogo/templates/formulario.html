@@ -1,0 +1,99 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          {% load static %}
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+          <link href="{%static 'css/bootstrap.min.css' %}" type="text/css" rel="stylesheet">
+          <link href="{%static 'css/estilos.css' %}" type="text/css" rel="stylesheet">
+        <script>
+          (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+              var forms = document.getElementsByClassName('needs-validation');
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                }, false);
+              });
+            }, false);
+          })();
+          </script>
+  
+        </head>
+          <main>
+            <div class="container">    
+                <h3 align="center" class="tituloxp">REGISTRESE PARA OBTENER NOTICIAS SOBRE LOS VIDEOJUEGOS</h1>
+                  <form class="needs-validation" action="confirmacion.html" novalidate>
+                    <div class="form-row">
+                      <div class="col-md-6 mb-3">
+                        <label for="nombres">Nombres</label>
+                        <input type="text" class="form-control" id="nombres" placeholder="Primer y Segundo Nombre" required>
+                        <div class="invalid-feedback">
+                          Ingresa Nombre
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" class="form-control" id="apellidos" placeholder="Primer y Segundo Apellido" required>
+                        <div class="invalid-feedback">
+                          Ingresa Apellido
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="email" placeholder="ejemplo@ejemplo.com" required>
+                        <div class="invalid-feedback">
+                          Ingresa un Email
+                        </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-6 mb-3">
+                        <label for="validationDefault03">Ciudad</label>
+                        <input type="text" class="form-control" id="validationDefault03" required>
+                        <div class="invalid-feedback">
+                          Ingresa una Ciudad
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label for="validationDefault04">Pais</label>
+                        <input type="text" class="form-control" id="validationDefault04" required>
+                        <div class="invalid-feedback">
+                          Ingresa un Pais
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label for="validationDefault05">Codigo Postal</label>
+                        <input type="text" class="form-control" id="validationDefault05" required>
+                        <div class="invalid-feedback">
+                          Ingresa Codigo Postal
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Enviar Formulario</button>
+                  </form>
+                 </div>
+          </main>
+    </body>
+</html>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

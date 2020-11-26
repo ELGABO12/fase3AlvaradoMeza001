@@ -1,0 +1,39 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="container d-flex flex-column">
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-3">{{game.title}}</h1>
+      <p class="lead"><strong>Desarrollador:</strong>{{game.developer}}</p>
+      <p class="lead"><strong>Editor:</strong>{{game.editor}}</p>
+      <p class="lead"><strong>Descripción:</strong>{{game.summary}}</p>
+      {% if game.genre %}
+      <p class="lead"><strong>Género:</strong>{{game.genre.name}} </p>
+
+      <a href="{% url 'genre-detail' game.genre.pk %}" class="btn btn-primary">
+        Ver más
+      </a>
+    {% else %}
+      <p class="texto">No hay géneros asociados a este juego</p>
+
+    {% endif %}
+      <p class="lead"><img class="card-img-top" src="{{ game.image.url }}">{{game.image}}</p>
+
+    </div>
+  </div>
+  {% if user.is_authenticated  %}{% if user.is_staff %}
+  <a class="btn btn-primary" href="{% url 'game_update' pk=game.pk %}">Editar    <span class="glyphicon glyphicon-pencil"></span></a>
+<br>
+<a class="btn btn-primary" href="{% url 'game_delete' pk=game.pk %}">Eliminar    <span class="glyphicon glyphicon-trash"></span></a>
+{% else %}{% endif %}{% else %}{% endif %}
+<br>
+<a href="{%url 'games' %}" class="btn btn-primary">Volver</a>
+<br>
+</div>
+
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<body class="masthead">
+<div class="container d-flex flex-column">
+<h1 class="titulotp" align="center">{{genre.name}}</h1>
+
+
+<div class="col-md-8" style="margin-top: 5%;">
+
+<h3 class="descripcion text-secondary">Descripción</h3>
+<br>
+    <p class="texto">{{genre.summary}}</p>
+<br>
+</div>
+{% if user.is_authenticated  %}{% if user.is_staff %}
+<a class="btn btn-primary" href="{% url 'genre_update' pk=genre.pk %}">Editar    <span class="glyphicon glyphicon-pencil"></span></a>
+<br>
+<a class="btn btn-primary" href="{% url 'genre_delete' pk=genre.pk %}">Eliminar    <span class="glyphicon glyphicon-trash"></span></a>
+{% else %}{% endif %}{% else %}{% endif %}
+<br>
+<a href="{%url 'genres' %}" class="btn btn-primary">Volver</a>
+<br>
+</div>
+
+</body>
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      {% load static %}
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <link href="{%static 'css/bootstrap.min.css' %}" type="text/css" rel="stylesheet">
+      <link href="{%static 'css/estilos.css' %}" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <br>
+        <main>
+           <h2 class="titulo2" align="center">TIENDA DE JUEGOS</h2>
+            <div class="row row-cols-2 row-cols-md-2">
+                <div class="col mb-4">
+                  <div class="card">
+                    <img src="{%static 'img/pss.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">PlayStation™ Store</h5>
+                      <p class="card-text">Inicia con la compra de los contenidos que traemos a tu disposición lleno de sorpresas. 
+                          Accede a contenidos inimaginables para tu consola, Descubre los elementos que tenemos. Todo en un solo lugar. 
+                          Precios únicos. Ofertas semanales. Juegos exclusivos.</p>
+                      <a href="https://store.playstation.com/es-cl/home/games" class="btn btn-primary">Ir Tienda >></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card">
+                    <img src="{%static 'img/xbox-live.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Microsoft Store</h5>
+                      <p class="card-text">La manera más rápida y fácil de obtener juegos y entretenimiento para tu Xbox.</p>
+                      <a href="https://www.xbox.com/es-CL/microsoft-store" class="btn btn-success">Ir Tienda >></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card">
+                    <img src="{%static 'img/steam.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Steam</h5>
+                      <p class="card-text">Explora los juegos de PC más nuevos, que más venden y que están de oferta en Steam</p>
+                      <a href="https://store.steampowered.com/" class="btn btn-primary">Ir Tienda >></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card">
+                    <img src="{%static 'img/epic.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Epic Games</h5>
+                      <p class="card-text">Disfruta de tus juegos favoritos en Epic Games Store</p>
+                      <a href="https://www.epicgames.com/store/es-MX/" class="btn btn-secondary">Ir Tienda >></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card">
+                      <img src="{%static 'img/Nintendo-eShop.jpg' %}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Nintendo eShop</h5>
+                        <p class="card-text">Visita Tienda Nintendo en línea para adquirir los códigos, y luego descarga los juegos digitales directo en tu dispositivo a través de Nintendo eShop.</p>
+                        <a href="https://store.nintendo.cl/" class="btn btn-warning">Ir Tienda >></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img src="{%static 'img/blizzard.jpg' %}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Tienda Blizzard</h5>
+                        <p class="card-text">Disfruta de los juegos de Blizzard en tu tienda favorita.</p>
+                        <a href="https://us.shop.battle.net/es-mx" class="btn btn-info">Ir Tienda >></a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </main>
+    </body>
+</html>
+{% endblock %}

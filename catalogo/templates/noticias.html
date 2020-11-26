@@ -1,0 +1,126 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      {% load static %}
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <link href="{%static 'css/bootstrap.min.css' %}" type="text/css" rel="stylesheet">
+      <link href="{%static 'css/estilos.css' %}" type="text/css" rel="stylesheet">
+</head>
+
+    <body>
+        <main>
+            <br>
+            <h1 class="titulo" align="center">Populares Del Mes</h1>
+            <div class="container">
+    
+                <div id="carousel1" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel1" data-slide-to="1"></li>
+                    <li data-target="#carousel1" data-slide-to="2"></li>
+                  </ol>
+        
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img class="d-block w-100" src="{%static 'img/amongus.jpg' %}" alt="">
+                        <div class="carousel-caption">
+                          <h3 style="background-color: black; font-size: medium;">Among Us</h3>
+                          <p style="background-color: black; font-size: small;" >Among Us es un juego muy parecido al clásico "El asesino" que hemos jugado alguna vez en cartas, pero llevado al mundo de los videojuegos. Estás en una nave espacial, y dos impostores que están "entre nosotros", de ahí el título, tienen que matar a los otro ocho tripulantes antes de que estos los descubran.
+                          </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{%static 'img/Fallguys.jpg' %}" alt="">
+                        <div class="carousel-caption">
+                          <h3 style="background-color: black; font-size: medium;">Fall Guys: Ultimate Knockout</h3>
+                          <p style="background-color: black; font-size: small;">Fall Guys: Ultimate Knockout reúne a 100 jugadores online en una carrera alocada y cada vez más caótica en la que solo puede haber un vencedor.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{%static 'img/valorant1.jpg' %}" alt="">
+                        <div class="carousel-caption">
+                          <h3 style="background-color: black; font-size: medium;">Valorant</h3>
+                          <p style="background-color: black; font-size: small;">El shooter 5vs5 que revoluciono todo, con personajes que tienen habilidades y ponen a prueba tu habilidad dentro del mapa ¿podras conseguir la victoria frente a el equipo enemigo?</p>
+                        </div>
+                    </div>
+                  </div>
+
+                  <a class="carousel-control-prev" href="#carousel1" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carousel1" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+            
+            </div>
+
+            <br>
+            <br>
+            <br>
+            
+        </main>
+        <h2 class="titulo2" align="center">NOTICIAS RELEVANTES</h2>
+      <div class="card-group">
+        <div class="card">
+        <img src="{%static 'img/RDO.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Red Dead Online se podrá comprar por separado a partir del 1 de diciembre</h5>
+          <p class="card-text">Red Dead Redemption 2 dejará de ser necesario para jugar a Red Dead Online a partir de diciembre, 
+            ya que el modo multijugador se pondrá a la venta por separado por 4,99 dólares en todos los sistemas.</p>
+          <a href="https://vandal.elespanol.com/noticia/1350739890/red-dead-online-se-podra-comprar-por-separado-a-partir-del-1-de-diciembre/" class="btn btn-dark">Ir a la noticia >></a>
+        </div>
+        </div>
+        <div class="card">
+          <img src="{%static 'img/Maradonacopadelmundo.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Murió la mano de dios: falleció el astro argentino Diego Maradona a los 60 años</h5>
+                <p class="card-text">Su máximo logro fue ganar junto a la selección argentina el Mundial de México 1986, transformándose en leyenda del fútbol. 
+                  Vistió seis camisetas, dirigió en seis clubes y lideró a la selección de su país como jugador y entrenador. El Gobierno de Argentina decretó un duelo nacional de tres días</p>
+          <a href="https://www.elmostrador.cl/noticias/multimedia/2020/11/25/murio-la-mano-de-dios-fallecio-el-astro-argentino-diego-maradona-a-los-60-anos/" class="btn btn-dark">Ir a la noticia >></a>
+          </div>
+       </div>
+      </div>
+      <br>
+      <div class="card-group">
+        <div class="card">
+          <img src="{%static 'img/MKMovie.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">MK 11 recibe skins basados en la película de 1995</h5>
+            <p class="card-text">Christopher Lambert, Liden Ashby y Bridgette Wilson-Sampras vuelven a interpretar a Raiden, Johnny Cage y Sonya tal y como hicieron en la película dirigda por Paul W.S. Anderson.</p>
+            <a href="https://vandal.elespanol.com/noticia/1350739905/mortal-kombat-11-suma-apariencias-con-los-actores-de-la-pelicula-de-1995/" class="btn btn-dark">Ir a la noticia >></a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{%static 'img/the-fortnite-galactus-event-1920x1080-616231251.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">¡GALACTUS LLEGA A FORTNITE!</h5>
+            <p class="card-text">UNETE A LA LUCHA EL 1 DE DICIEMBRE</p>
+                <p class="card-text">Galactus se aproxima a la isla y el destino de toda nuestra realidad está en peligro. 
+                  Únanse por única vez a la lucha definitiva contra Galactus durante el episodio final del evento Guerra en el Nexus este martes, 1 de diciembre, a las 18:00 AR y 15:00 MX .</p>
+            <a href="https://www.epicgames.com/fortnite/es-MX/news/galactus-arrives-join-the-fight-in-fortnite-event-on-december-1?lang=es-MX" class="btn btn-dark">Ir a la noticia >></a>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <img src="{%static 'img/_articulos_-5290760.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">El regreso de Crash Bandicoot, FIFA 21, Watch Dogs: Legion y mucho más en Lo Mejor del Mes</h5>
+          <p class="card-text">Un repaso con todas las novedades y grandes lanzamientos de un mes de octubre al que decimos adiós con una gran sonrisa en la cara.</p>
+          <a href="https://www.3djuegos.com/juegos/articulos/2101/0/el-regreso-de-crash-bandicoot-fifa-21-watch-dogs-legion-y-mucho-mas-en-lo-mejor-del-mes/" class="btn btn-dark">Ir a la noticia >></a>
+        </div>
+      </div>
+      </main>
+    </body>
+</html>
+{% endblock %}

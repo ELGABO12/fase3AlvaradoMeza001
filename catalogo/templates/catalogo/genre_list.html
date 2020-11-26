@@ -1,0 +1,69 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<body>
+    <h1 class="titulotp" align="center">LISTA DE GENEROS</h1>
+
+    {% if user.is_authenticated  %}{% if user.is_staff %}
+    <div style="width: 92%; height: 50px;">
+    <a class="btn btn-primary" href="{% url 'genre_create' %}" style="float: right; font-size: 14px;">Agregar Género 
+        <span class="glyphicon glyphicon-plus"></span>
+    </a>
+  </div>
+  {% else %}{% endif %}{% else %}{% endif %}
+
+    {% if genre_list %}
+    <div class="container d-flex flex-column">
+    <div style="width: 60%;">
+        <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                </tr>
+
+                {% for genre in genre_list %}
+                    
+                        <tr>
+                            <td><a href="{{ genre.get_absolute_url }}"> {{ genre.name }} </a></td>
+                            <td>{{ genre.summary }}</td>
+                        </tr>
+                
+                    
+                {% endfor %}
+
+        </table>
+
+        <br>
+
+        {% if is_paginated %}
+          <ul class="pagination">
+          {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+          {% else %}
+            <li class="disabled"><span>&laquo;</span></li>
+          {% endif %}
+
+          {% for i in paginator.page_range %}
+            {% if page_obj.number == i %}
+              <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+            {% else %}
+              <li><a href="?page={{ i }}">{{ i }}</a></li>
+            {% endif %}
+          {% endfor %}
+
+          {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+          {% else %}
+            <li class="disabled"><span>&raquo;</span></li>
+          {% endif %}
+          </ul>
+        {% endif %}
+
+    </div>
+  </div>
+    {% else %}
+        <p>No hay géneros disponibles</p>
+
+    {% endif %}
+</body>
+{% endblock %}

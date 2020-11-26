@@ -1,0 +1,74 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      {% load static %}
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <link href="{%static 'css/bootstrap.min.css' %}" type="text/css" rel="stylesheet">
+      <link href="{%static 'css/estilos.css' %}" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+              
+              <main>
+                  <br>
+                  
+                <h1 class="titulotp" align="center">Información sobre VGN</h1>
+                <br>
+                <br>
+                <div class="container">   
+                    <div class="jumbotron">
+                      <h1>¿Quienes somos?</h1> 
+                      <p>Somos una pequeña compañia que se esta iniciando en el mundo de las noticias principalmente sobre los videojuegos.<br>
+                        También sobre las compañias de estos y las consolas y todo lo que va ligado a ellas.</p>
+                            
+                    </div>
+                
+                    <div class="container">   
+                        <div class="jumbotron">
+                          <h1>Nuestra misión</h1> 
+                          <p> Tenemos como misión mantener informados e informadas a toda la comunidad gamer, facilitandole información sobre precios, ofertas, inaguraciones, fechas, etc. <br>
+                            Como también que sepan cuales juegos fueron los más jugados en el ultimo tiempo, los más populares a nivel global y que trasciende en el tiempo.
+                             </p>
+                               
+                        </div>
+                      </div>
+                  </div>
+              </main>    
+<footer class="page-footer font-small teal pt-4" style="background-color: darkslategray; color: white;">
+
+  
+    <div class="container-fluid text-center text-md-left">
+      <div class="row">
+        <div class="col-md-6 mt-md-0 mt-3">
+          <h5 class="text-uppercase font-weight-bold">Administrador</h5>
+          <img src="{%static 'img/pp.jpg' %}" style="max-width: fit-content"> 
+          <p>Mi nombre es Nicolás Alvarado, tengo 22 años y vivo en Santiago de Chile, soy estudiante de ingenieria en informática en Duoc UC y espero brindarles lo mejor en este proyecto.</p>
+        </div>
+  
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <div class="col-md-6 mb-md-0 mb-3">
+          <h5 class="text-uppercase font-weight-bold">Administrador</h5>
+          <img src="{%static 'img/fot1.jpg' %}" style="max-width: fit-content"> 
+          <p>Me llamo Gabriel Meza. Tengo 20 años y vivo en Maipú. Soy estudiante ingeniero en informatica de DUOC UC. No dejes nunca de soñar.</p>
+        </div>
+        
+  
+      </div>
+      
+  
+    </div>
+   
+  
+  </footer>
+  
+        
+    </body>
+</html>
+{% endblock %}
